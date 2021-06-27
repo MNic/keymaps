@@ -15,7 +15,7 @@
  */
 
 #include QMK_KEYBOARD_H
-#include "mnic_cajal.h"
+#include "cajal.h"
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // qwerty

@@ -21,6 +21,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* Custom Additions */
 #define PERMISSIVE_HOLD
+#define TAPPING_TERM 100
+
 
 /* USB Device descriptor parameter */
 #define VENDOR_ID       0xE5CA
@@ -68,7 +70,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RGBLIGHT_SAT_STEP 12
 #define RGBLIGHT_VAL_STEP 12
 #define RGBLIGHT_LIMIT_VAL 128
-#define TAPPING_TERM 140
 
 /*
  * Feature disable options

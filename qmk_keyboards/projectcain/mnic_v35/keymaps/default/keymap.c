@@ -30,7 +30,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC,
     KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_QUOTE,
-    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH,
+    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_RCTL,
          KC_LGUI,      MO(2), SFT_T(KC_BSPC),  KC_SPACE,       MO(1),  MO(3)
   ),
 
@@ -39,7 +39,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_1,    KC_2,    KC_3,      KC_4,     KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC,
     S(KC_GRV),    KC_GRV,    KC_BSLS,    S(KC_BSLS),    KC_WFWD,    KC_LEFT,    KC_DOWN,    KC_UP,    KC_RIGHT,    KC_PPLS,
     KC_SLSH,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_0,       KC_1,    KC_2,    KC_3,    KC_PDOT,
-         KC_TRNS,            MO(3),  KC_TRNS,      KC_TRNS,   KC_TRNS, RALT(KC_F4)
+         KC_TRNS,            MO(3),  KC_TRNS,      KC_TRNS,   KC_TRNS, KC_RALT
   ),
 
   [SYM] = LAYOUT_split_4space(
@@ -64,6 +64,9 @@ enum combos {
   QW_ESC,
   LQUOTE_ENTER,
   AS_TAB,
+  ZX_CUT,
+  XC_COPY,
+  CV_PASTE,
 };
 
 const uint16_t PROGMEM kl_combo[] = {KC_K, KC_L, COMBO_END};
@@ -71,12 +74,18 @@ const uint16_t PROGMEM jk_combo[] = {KC_J, KC_K, COMBO_END};
 const uint16_t PROGMEM qw_combo[] = {KC_Q, KC_W, COMBO_END};
 const uint16_t PROGMEM lquote_combo[] = {KC_L, KC_QUOTE, COMBO_END};
 const uint16_t PROGMEM as_combo[] = {KC_A, KC_S, COMBO_END};
+const uint16_t PROGMEM zx_combo[] = {KC_Z, KC_X, COMBO_END};
+const uint16_t PROGMEM xc_combo[] = {KC_X, KC_C, COMBO_END};
+const uint16_t PROGMEM cv_combo[] = {KC_C, KC_V, COMBO_END};
 
 combo_t key_combos[] = {
   [KL_SLSH] = COMBO(kl_combo, S(KC_SLSH)),
   [JK_MINUS] = COMBO(jk_combo, KC_MINUS),
   [QW_ESC] = COMBO(qw_combo, KC_ESC),
   [LQUOTE_ENTER] = COMBO(lquote_combo, KC_ENTER),
-  [AS_TAB] = COMBO(as_combo, KC_TAB),
+  [AS_TAB] = COMBO(as_combo, LCTL_T(KC_TAB)),
+  [ZX_CUT] = COMBO(zx_combo, G(KC_X)),
+  [XC_COPY] = COMBO(xc_combo, G(KC_C)),
+  [CV_PASTE] = COMBO(cv_combo, G(KC_V)),
 }
 ;

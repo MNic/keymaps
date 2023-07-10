@@ -18,3 +18,10 @@
 
 #define COMBO_TERM 50
 #define QUICK_TAP_TERM 0
+#define AUTO_SHIFT_TIMEOUT 150
+#define NO_AUTO_SHIFT_SPECIAL
+#define NO_AUTO_SHIFT_ALPHA
+#define WS2812_DI_PIN D5
+#define RGB_DI_PIN D5
+#define RGBLED_NUM 12 // Number of LEDs
+#define RGBLIGHT_ANIMATIONS

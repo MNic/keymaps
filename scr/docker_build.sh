@@ -1,4 +1,4 @@
-# Copyright 2022 Duke Institute for Health Innovation (DIHI), 
+# Copyright 2023 Duke Institute for Health Innovation (DIHI), 
 # Duke University School of Medicine, Durham NC. 
 # All Rights Reserved. 
 # 
@@ -8,3 +8,4 @@
 # 
 # https://dihi.org
 
+docker build -f ./images/qmk/Dockerfile --tag "myqmk:latest" .

@@ -1,4 +1,4 @@
-# Copyright 2022 Duke Institute for Health Innovation (DIHI), 
+# Copyright 2023 Duke Institute for Health Innovation (DIHI), 
 # Duke University School of Medicine, Durham NC. 
 # All Rights Reserved. 
 # 
@@ -8,3 +8,10 @@
 # 
 # https://dihi.org
 
+docker run --rm -it \
+	-w /home/model/qmk_firmware \
+	-v ${PWD}/qmk_keyboards:/home/model/qmk_firmware/keyboards \
+	-v ${PWD}/build:/home/model/qmk_firmware/.build \
+	-e ALT_GET_KEYBOARDS=true \
+    myqmk:latest \
+    $@

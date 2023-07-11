@@ -29,9 +29,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [BASE] = LAYOUT_split_4space(
 
     KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC,
-    KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_QUOTE,
+    KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_ENTER,
     KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_RCTL,
-         KC_LGUI,      MO(2), SFT_T(KC_BSPC),  KC_SPACE,       MO(1),  MO(3)
+         KC_LGUI,      MO(2), KC_LSFT,  KC_SPACE,       MO(1),  KC_RALT
   ),
 
   [NUM] = LAYOUT_split_4space(
@@ -39,18 +39,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_1,    KC_2,    KC_3,      KC_4,     KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC,
     S(KC_GRV),    KC_GRV,    KC_BSLS,    S(KC_BSLS),    KC_WFWD,    KC_LEFT,    KC_DOWN,    KC_UP,    KC_RIGHT,    KC_PPLS,
     KC_SLSH,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_0,       KC_1,    KC_2,    KC_3,    KC_PDOT,
-         KC_TRNS,            MO(3),  KC_TRNS,      KC_TRNS,   KC_TRNS, KC_RALT
+         KC_TRNS,            MO(3),  KC_TRNS,      KC_TRNS,   KC_TRNS, KC_TRNS
   ),
 
   [SYM] = LAYOUT_split_4space(
-    S(KC_1),    S(KC_2),    S(KC_3),    S(KC_4),    S(KC_5),    S(KC_6),    S(KC_7),    S(KC_8),    KC_SCLN,    S(KC_SCLN), KC_DEL,
-    S(KC_SLSH),    S(KC_BSLS),    KC_QUOTE,    S(KC_QUOTE),    KC_TRNS,    S(KC_MINS),   KC_EQL ,   KC_LBRC,    KC_RBRC,    C(KC_W),  
-    KC_F1,    KC_F2,    KC_F3,   KC_SCLN,    S(KC_SCLN),    KC_F6,    KC_F7,    KC_MINUS,    KC_F9,    KC_F10,
-            KC_TRNS,           KC_TRNS,   KC_TRNS,      KC_TRNS,        MO(3),    KC_TRNS
+    S(KC_1),     S(KC_2),     S(KC_3),   S(KC_4),     S(KC_5),    S(KC_6),      S(KC_7),  S(KC_8),    S(KC_9),    S(KC_0), KC_DEL,
+    S(KC_SLSH),  S(KC_BSLS),  KC_QUOTE,  S(KC_QUOTE), KC_TRNS,    S(KC_MINUS),  KC_EQL ,  KC_LBRC,    KC_RBRC,    KC_TRNS,  
+    KC_TRNS,     KC_TRNS,     KC_SCLN,   S(KC_SCLN),  KC_TRNS,    KC_MINUS,     KC_PLUS,  S(KC_LBRC),   S(KC_RBRC),    KC_TRNS,
+             KC_TRNS,         KC_TRNS,   KC_TRNS,     KC_TRNS,    MO(3),      KC_TRNS
   ), 
 
   [LIGHT] = LAYOUT_split_4space(
-    RGB_TOG,   RGB_HUI,    RGB_SAI,   RGB_VAI,    RGB_MOD,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS, QK_BOOT,
+    RGB_TOG,   RGB_HUI,    RGB_SAI,   RGB_VAI,    RGB_MOD,    KC_TRNS,    KC_TRNS,   KC_TRNS,    KC_TRNS,    KC_TRNS, QK_BOOT,
     KC_TRNS,    RGB_HUD,   RGB_SAD,   RGB_VAD,    RGB_RMOD,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,  
     KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,
             KC_TRNS,           KC_TRNS,   KC_TRNS,      KC_TRNS,        KC_TRNS,    KC_TRNS

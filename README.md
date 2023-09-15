@@ -2,22 +2,16 @@
 
 Personal keymaps
 
-Corne and Planck are zip exports from QMK's online configurator.
+## Basic Usage
 
-`mnic_cajal` is a derivative of the default ortho cajal layout.
+1. `bash scr/docker_build.sh` - creates a local docker image based on the dockerfile located at `images/qmk`
+2. `bash scr/docker_run.sh` - gives access to qmk commands and make for building keyboard firmware from your docker host
 
 
-## mnic_cajal
+### Example
 
-### Basic Usage
+`bash scr/docker_run.sh make tominabox1/le_chiffre/rev2:mnic_miryoku`
 
-Keymap location: `mnic_cajal/keymaps/default_ortho/keymap.c`
+This command uses qmk's make inside the image to build a le chiffre keymap.  The bash script wrapper mounts the .build directory inside the image to your local directory structure.  The built .hex file for flashing is left in the local build directory for use when flashing with QMK Toolbox.
 
-1. Copy this directory into the `qmk_firmware/keyboards/walletburner/mnic_cajal`
-2. Run `make walletburner/mnic_cajal:default_ortho` to compile
-3. Open QMK Toolbox
-4. 'Open' the newly created .hex file (Typically located at the root of `qmk_firmware`)
-5. Get cajal into bootloader
-   1. If first time flashing, hit reset button on PBC
-   2. Once flashed the first time a Layer(3) click of the Rotary Encoder will put the PCB into bootloader.
-6. Flash
+For new keymaps, I typically copy the core keyboard out of the qmk firmware github into an appropriate subdirectory in the `qmk_keyboards` directory, modify for my uses and build my firmware using the example above.  

@@ -27,9 +27,10 @@
 
 #define COMBO_TERM 30
 
-#define TAPPING_TERM 200
+#define TAPPING_TERM 180
 #define PERMISSIVE_HOLD
-#define TAPPING_TERM_PER_KEY
+// #define TAPPING_TERM_PER_KEY
+// #define BILATERAL_COMBINATIONS
 #define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
 
 /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */

@@ -199,13 +199,13 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case KC_GA: 
-            return TAPPING_TERM + 150;
+            return TAPPING_TERM + 50;
         case KC_GQUOTE:
-            return TAPPING_TERM + 150;
+            return TAPPING_TERM + 50;
         case KC_SF:
-            return TAPPING_TERM - 100;
+            return TAPPING_TERM - 50;
         case KC_SJ:
-            return TAPPING_TERM - 100;
+            return TAPPING_TERM - 50;
         default:
             return TAPPING_TERM;
 }}

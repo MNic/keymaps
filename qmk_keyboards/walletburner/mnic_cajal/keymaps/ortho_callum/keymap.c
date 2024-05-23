@@ -188,6 +188,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     return true;
 }
 
+// This swaps to _NUM when _SYM and _NAV are held
 // layer_state_t layer_state_set_user(layer_state_t state) {
 //     return update_tri_layer_state(state, _SYM, _NAV, _NUM);
 // }
@@ -213,6 +214,8 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     writePinLow(B7);
     writePinLow(B6);
     writePinLow(B5);
+    // switch (get_highest_layer(state)) {
+    state = update_tri_layer_state(state, _SYM, _NAV, _NUM); 
     switch (get_highest_layer(state)) {
     case 2:
         writePinHigh(B6);
@@ -232,6 +235,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
         writePinHigh(B7);
         break;
     }
+    // return update_tri_layer_state(state, _SYM, _NAV, _NUM);
     return state;
 }
 

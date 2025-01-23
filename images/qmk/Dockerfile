@@ -12,6 +12,7 @@ RUN apt-get install gcc-arm-none-eabi -y
 RUN apt-get install avrdude -y
 RUN apt-get install dfu-programmer -y
 RUN apt-get install dfu-util -y
+RUN apt-get install git -y
 
 RUN useradd model --system --uid 1001 --create-home
 USER 1001
